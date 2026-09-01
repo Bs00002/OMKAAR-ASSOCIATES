@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1A261E;
+    background-color: #F8F4EA;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+:root {
+  --brand-gold: #D4A017;
+  --brand-gold-dark: #B8860B;
+  --brand-gold-light: #FAF3E0;
+  
+  --brand-green: #176B3A;
+  --brand-green-dark: #0F4726;
+  --brand-green-darker: #0A331B;
+  --brand-green-light: #F0F7F2;
+
+  --brand-maroon: #7A1F2B;
+  --brand-maroon-dark: #5A141E;
+  --brand-maroon-light: #FDF2F4;
+
+  --brand-saffron: #F28C28;
+  --brand-saffron-dark: #D97718;
+  --brand-saffron-light: #FFF5EC;
+
+  --brand-bg: #F8F4EA;
+  --brand-text: #1A261E;
+  --brand-card-bg: #FFFFFF;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', 'Plus Jakarta Sans', serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Editorial subtle borders and frames */
+.editorial-frame {
+  border: 1px solid rgba(212, 160, 23, 0.4);
+  box-shadow: 0 4px 20px -2px rgba(122, 31, 43, 0.05);
+}
+
+.editorial-frame:hover {
+  border-color: rgba(212, 160, 23, 0.8);
+  box-shadow: 0 12px 30px -4px rgba(122, 31, 43, 0.08);
+}
+
+/* Custom refined scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F4EA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4A017;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8860B;
+}
+
+/* Hide scrollbar helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

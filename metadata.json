@@ -1,0 +1,7 @@
+{
+  "name": "Omkaar Associates - Multi-Service Consultancy & Assistance",
+  "description": "Premium multi-service assistance & consultancy platform for Financial Solutions, RTO & Documentation, and Career Services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
