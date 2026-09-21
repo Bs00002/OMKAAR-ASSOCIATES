@@ -200,7 +200,7 @@ export const EnquiryModal: React.FC = () => {
                   className="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#7A1F2B] focus:border-transparent"
                 >
                   <optgroup label="Financial Solutions">
-                    <option value="Gold Loan Assistance">Gold Loan Assistance</option>
+                    <option value="Financial Guidance & Assistance">Financial Guidance & Assistance</option>
                     <option value="Gold Loan Assistance">Gold Loan Assistance</option>
                     <option value="Home Loan Assistance">Home Loan Assistance</option>
                     <option value="Mortgage Loan (LAP) Assistance">Mortgage Loan (LAP) Assistance</option>
