@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { Landmark, FileCheck2, GraduationCap, Fingerprint, Compass, ArrowRight } from 'lucide-react';
+import { Landmark, FileCheck2, GraduationCap, Fingerprint, ArrowRight } from 'lucide-react';
 
 export const ServicePillars: React.FC = () => {
   const { navigate } = useApp();
@@ -45,16 +45,6 @@ export const ServicePillars: React.FC = () => {
       color: 'border-[#D4A017] text-[#D4A017]',
       iconBg: 'bg-[#FAF3E0] text-[#D4A017]',
       accentBg: 'hover:border-[#D4A017]'
-    },
-    {
-      id: 'vastu',
-      title: 'VASTU CONSULTANCY',
-      desc: 'Residential, Commercial, Shop, Property & Vastu Guidance',
-      icon: Compass,
-      route: '/services',
-      color: 'border-[#7A1F2B] text-[#7A1F2B]',
-      iconBg: 'bg-[#FDF2F4] text-[#7A1F2B]',
-      accentBg: 'hover:border-[#7A1F2B]'
     }
   ];
 
@@ -62,7 +52,7 @@ export const ServicePillars: React.FC = () => {
     <section className="bg-white py-8 sm:py-10 border-b border-[#D4A017]/20 relative z-20 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {pillars.map((p) => {
             const IconComp = p.icon;
             return (

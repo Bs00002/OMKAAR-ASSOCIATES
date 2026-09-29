@@ -48,7 +48,7 @@ export const AboutEditorial: React.FC = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
-              Omkaar Associates helps individuals and businesses navigate financial assistance, RTO & documentation, career services, Aadhaar/PAN, and Vastu consultancy with clear, step-by-step guidance.
+              Omkaar Associates helps individuals and businesses navigate financial assistance, RTO & documentation, career services, and Aadhaar/PAN with clear, step-by-step guidance.
             </p>
 
             <p className="text-sm text-slate-600 leading-relaxed">

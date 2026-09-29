@@ -132,8 +132,10 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-[#7A1F2B] uppercase">Email Enquiries</div>
-                    <div className="font-bold text-slate-900 mt-0.5">contact@omkaarassociates.in</div>
-                    <div className="text-xs text-slate-500">support@omkaarassociates.in</div>
+                    <a href="mailto:omkaarassociates9@gmail.com" className="font-bold text-slate-900 mt-0.5 block hover:text-[#7A1F2B] transition-colors">
+                      omkaarassociates9@gmail.com
+                    </a>
+                    <div className="text-xs text-slate-500">Official Communication Desk</div>
                   </div>
                 </div>
 

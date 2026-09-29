@@ -44,7 +44,9 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5 text-white/90">
                 <Mail className="w-4 h-4 text-[#D4A017] shrink-0" />
-                <span>Email: contact@omkaarassociates.in</span>
+                <a href="mailto:omkaarassociates9@gmail.com" className="hover:text-[#D4A017] transition-colors">
+                  Email: omkaarassociates9@gmail.com
+                </a>
               </div>
               <div className="flex items-start gap-2.5 text-white/90">
                 <MapPin className="w-4 h-4 text-[#D4A017] shrink-0 mt-0.5" />

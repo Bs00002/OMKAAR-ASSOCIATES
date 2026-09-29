@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { ArrowRight, CheckCircle2, Landmark, FileCheck2, GraduationCap, Fingerprint, Compass } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Landmark, FileCheck2, GraduationCap, Fingerprint } from 'lucide-react';
 
 export const MajorServicesSection: React.FC = () => {
   const { navigate } = useApp();
@@ -137,39 +137,6 @@ export const MajorServicesSection: React.FC = () => {
       image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80',
       imageAlt: 'Aadhaar and PAN documentation services',
       reverse: true
-    },
-    {
-      id: 'vastu',
-      num: '05',
-      category: 'VASTU CONSULTANCY',
-      title: 'Property & Space Vastu Consultancy',
-      tagline: 'Harmonizing residential and commercial spaces.',
-      description:
-        'Clear, practical Vastu alignment guidance for homes, commercial offices, retail shops, and industrial plots to enhance prosperity, well-being, and operational harmony.',
-      items: [
-        'Residential Home & Apartment Vastu Evaluation',
-        'Commercial Office & Corporate Layout Vastu',
-        'Shop & Retail Space Directional Guidance',
-        'Plot Selection & Architectural Layout Advice',
-        'Remedial Vastu Guidance (Non-structural)',
-        'Personalized Consultation Reports'
-      ],
-      route: '/services',
-      ctaText: 'Consult Vastu Expert',
-      theme: {
-        numColor: 'text-[#7A1F2B]/30',
-        categoryColor: 'text-[#7A1F2B]',
-        tagBg: 'bg-[#7A1F2B] text-white',
-        titleColor: 'text-[#7A1F2B]',
-        btnBg: 'bg-[#7A1F2B] hover:bg-[#5A141E] text-white',
-        bulletIconColor: 'text-[#D4A017]',
-        borderColor: 'border-[#7A1F2B]/20',
-        hoverBorder: 'hover:border-[#7A1F2B]',
-        accentCardBg: 'bg-white'
-      },
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
-      imageAlt: 'Vastu consultancy for homes and offices',
-      reverse: false
     }
   ];
 
@@ -186,11 +153,11 @@ export const MajorServicesSection: React.FC = () => {
             Services Designed <span className="text-[#D4A017]">Around Your Needs</span>
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-700 leading-relaxed">
-            Professional assistance across Financial, RTO, Career, Identity, and Vastu requirements — with step-by-step clarity.
+            Professional assistance across Financial, RTO, Career, and Identity requirements — with step-by-step clarity.
           </p>
         </div>
 
-        {/* 5 Alternating Editorial Panels */}
+        {/* 4 Alternating Editorial Panels */}
         <div className="space-y-12">
           {servicePanels.map((panel) => {
             return (
