@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { MessageCircle, Phone, Send, ShieldCheck } from 'lucide-react';
+import { Mail, Send, ShieldCheck } from 'lucide-react';
 
 export const FinalCta: React.FC = () => {
   const { openEnquiryModal } = useApp();
@@ -29,36 +29,25 @@ export const FinalCta: React.FC = () => {
           Tell us what you need and our team will guide you through the next steps.
         </p>
 
-        {/* Action Buttons: Saffron primary + Green WhatsApp + Phone */}
+        {/* Action Buttons: Saffron primary + Email button */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           
           {/* Primary Saffron Button: Enquire Now */}
           <button
             onClick={() => openEnquiryModal()}
-            className="px-8 py-4 bg-[#F28C28] hover:bg-[#D97718] text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2"
+            className="px-8 py-4 bg-[#F28C28] hover:bg-[#D97718] text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer"
           >
             <Send className="w-4 h-4" />
-            <span>ENQUIRE NOW</span>
+            <span>SUBMIT ONLINE ENQUIRY</span>
           </button>
 
-          {/* Green WhatsApp Button */}
+          {/* Email Us Button */}
           <a
-            href="https://wa.me/919820000000?text=Hello%20Omkaar%20Associates,%20I%20need%20guidance%20with%20your%20services."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-4 bg-[#176B3A] hover:bg-[#0F4726] border border-[#D4A017]/40 text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl shadow-sm transition-all flex items-center gap-2"
+            href="mailto:omkaarassociates9@gmail.com"
+            className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition-all flex items-center gap-2"
           >
-            <MessageCircle className="w-4 h-4 text-[#D4A017]" />
-            <span>WHATSAPP US</span>
-          </a>
-
-          {/* Call Now */}
-          <a
-            href="tel:+919820000000"
-            className="px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-xl transition-all flex items-center gap-2"
-          >
-            <Phone className="w-4 h-4 text-[#D4A017]" />
-            <span>CALL: +91 98200 00000</span>
+            <Mail className="w-4 h-4 text-[#D4A017]" />
+            <span>EMAIL US DIRECTLY</span>
           </a>
 
         </div>

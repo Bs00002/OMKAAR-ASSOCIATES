@@ -522,7 +522,7 @@ export const GENERAL_FAQS: FaqItem[] = [
     id: 'faq-4',
     category: 'rto',
     question: 'How can I enquire about RTO and Driving Licence services?',
-    answer: 'You can submit an online enquiry on our website, message us on WhatsApp, or call our centre. We will review your requirement, guide you on the necessary documents, assist in booking your RTO appointment slot, and prepare your application file.'
+    answer: 'You can submit an online enquiry on our website or email our desk at omkaarassociates9@gmail.com. We will review your requirement, guide you on the necessary documents, assist in booking your RTO appointment slot, and prepare your application file.'
   },
   {
     id: 'faq-5',
@@ -552,7 +552,7 @@ export const GENERAL_FAQS: FaqItem[] = [
     id: 'faq-9',
     category: 'general',
     question: 'How can I contact Omkaar Associates?',
-    answer: 'You can reach us by submitting the online enquiry form, chatting directly via WhatsApp, or calling our helpline during working hours. Our consultants are ready to assist you.'
+    answer: 'You can reach us by submitting the online enquiry form on our website or emailing our official desk directly at omkaarassociates9@gmail.com. Our consultants will review your requirement and promptly guide you.'
   }
 ];
 

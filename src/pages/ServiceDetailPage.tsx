@@ -8,9 +8,8 @@ import {
   CheckCircle2, 
   FileText, 
   Send, 
-  MessageSquare, 
+  Mail, 
   ShieldCheck, 
-  PhoneCall, 
   AlertCircle,
   HelpCircle,
   Clock
@@ -78,13 +77,11 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ service })
               </button>
 
               <a
-                href={`https://wa.me/919820000000?text=Hello%20Omkaar%20Associates,%20I%20would%20like%20guidance%20for%20${encodeURIComponent(service.title)}.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-3 bg-[#176B3A] hover:bg-[#0F4726] text-white font-bold text-xs sm:text-sm rounded-lg transition-colors flex items-center gap-2 border border-[#D4A017]/30"
+                href={`mailto:omkaarassociates9@gmail.com?subject=${encodeURIComponent(`Enquiry: ${service.title}`)}`}
+                className="px-5 py-3 bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm rounded-lg transition-colors flex items-center gap-2 border border-white/20"
               >
-                <MessageSquare className="w-4 h-4 text-[#D4A017]" />
-                <span>Chat on WhatsApp</span>
+                <Mail className="w-4 h-4 text-[#D4A017]" />
+                <span>Email Enquiry</span>
               </a>
             </div>
 
@@ -252,21 +249,11 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ service })
                 </button>
 
                 <a
-                  href={`https://wa.me/919820000000?text=Hello%20Omkaar%20Associates,%20I%20want%20assistance%20for%20${encodeURIComponent(service.title)}.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-2.5 px-4 bg-[#176B3A] hover:bg-[#0F4726] text-white font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-2 border border-[#D4A017]/30"
-                >
-                  <MessageSquare className="w-3.5 h-3.5 text-[#D4A017]" />
-                  <span>Chat on WhatsApp</span>
-                </a>
-
-                <a
-                  href="tel:+919820000000"
+                  href={`mailto:omkaarassociates9@gmail.com?subject=${encodeURIComponent(`Service Request: ${service.title}`)}`}
                   className="w-full py-2.5 px-4 bg-[#FAF9F6] hover:bg-[#FDF2F4] text-[#7A1F2B] font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-2 border border-slate-200"
                 >
-                  <PhoneCall className="w-3.5 h-3.5 text-[#7A1F2B]" />
-                  <span>Call: +91 98200 00000</span>
+                  <Mail className="w-3.5 h-3.5 text-[#7A1F2B]" />
+                  <span>Email Helpdesk Directly</span>
                 </a>
               </div>
 

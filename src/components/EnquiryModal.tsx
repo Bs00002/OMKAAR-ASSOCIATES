@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
-import { X, CheckCircle2, Send, MessageSquare, ShieldCheck } from 'lucide-react';
+import { X, CheckCircle2, Send, Mail, ShieldCheck } from 'lucide-react';
 import { MANDATORY_FINANCIAL_DISCLAIMER } from '../data/servicesData';
 
 export const EnquiryModal: React.FC = () => {
@@ -48,23 +48,23 @@ export const EnquiryModal: React.FC = () => {
     showToast('Enquiry received! Our team will contact you shortly.');
   };
 
-  const handleWhatsAppDirect = () => {
+  const handleEmailDirect = () => {
     if (!name.trim() || !phone.trim()) {
       validate();
       return;
     }
     const cleanPhone = phone.replace(/\D/g, '');
-    const encodedText = encodeURIComponent(
-      `*New Service Enquiry - Omkaar Associates*\n` +
-      `*Name:* ${name}\n` +
-      `*Mobile:* ${cleanPhone}\n` +
-      `*Service:* ${service}\n` +
-      `*City:* ${city || 'Not specified'}\n` +
-      `*Requirement:* ${message || 'Need assistance with this service.'}`
+    const subject = encodeURIComponent(`Service Enquiry: ${service} - ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\n` +
+      `Mobile: ${cleanPhone}\n` +
+      `Service Required: ${service}\n` +
+      `City: ${city || 'Not specified'}\n` +
+      `Requirement: ${message || 'Need assistance with this service.'}`
     );
-    window.open(`https://wa.me/919820000000?text=${encodedText}`, '_blank');
+    window.location.href = `mailto:omkaarassociates9@gmail.com?subject=${subject}&body=${body}`;
     closeEnquiryModal();
-    showToast('Redirected to WhatsApp. We look forward to assisting you!');
+    showToast('Opening your email app to send your enquiry...');
   };
 
   const resetAndClose = () => {
@@ -119,13 +119,13 @@ export const EnquiryModal: React.FC = () => {
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row gap-2 justify-center">
-                <button
-                  onClick={handleWhatsAppDirect}
-                  className="px-4 py-2.5 bg-[#176B3A] hover:bg-[#0F4726] text-white rounded-lg text-xs font-bold flex items-center justify-center gap-2"
+                <a
+                  href={`mailto:omkaarassociates9@gmail.com?subject=${encodeURIComponent(`Enquiry Follow-up: ${service} - ${name}`)}`}
+                  className="px-4 py-2.5 bg-[#7A1F2B] hover:bg-[#5A141E] text-white rounded-lg text-xs font-bold flex items-center justify-center gap-2"
                 >
-                  <MessageSquare className="w-4 h-4" />
-                  <span>Continue on WhatsApp Now</span>
-                </button>
+                  <Mail className="w-4 h-4 text-[#D4A017]" />
+                  <span>Email Follow-up Directly</span>
+                </a>
                 <button
                   onClick={resetAndClose}
                   className="px-4 py-2.5 bg-[#FAF9F6] hover:bg-[#FDF2F4] text-[#7A1F2B] rounded-lg text-xs font-semibold border border-slate-200"
@@ -164,7 +164,7 @@ export const EnquiryModal: React.FC = () => {
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      placeholder="98200 12345"
+                      placeholder="e.g. 9876543210"
                       className={`w-full pl-11 pr-3 py-2 text-sm rounded-lg border ${
                         errors.phone ? 'border-[#F28C28] bg-[#FFF5EC]' : 'border-slate-300'
                       } focus:outline-none focus:ring-2 focus:ring-[#7A1F2B] focus:border-transparent`}
@@ -247,11 +247,11 @@ export const EnquiryModal: React.FC = () => {
 
                 <button
                   type="button"
-                  onClick={handleWhatsAppDirect}
-                  className="w-full py-2.5 px-4 bg-[#F0F7F2] border border-[#176B3A] text-[#176B3A] hover:bg-[#E0EFE6] font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-2"
+                  onClick={handleEmailDirect}
+                  className="w-full py-2.5 px-4 bg-[#FAF9F6] border border-[#7A1F2B]/30 text-[#7A1F2B] hover:bg-[#FDF2F4] font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <MessageSquare className="w-4 h-4 text-[#176B3A]" />
-                  <span>Or Send via WhatsApp Directly</span>
+                  <Mail className="w-4 h-4 text-[#7A1F2B]" />
+                  <span>Or Send Enquiry via Direct Email</span>
                 </button>
               </div>
 

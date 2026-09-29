@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { 
-  Phone, 
-  MessageCircle, 
   Mail, 
-  MapPin, 
   Clock, 
   Send, 
   CheckCircle2, 
   ShieldCheck,
-  MessageSquare
+  Building2
 } from 'lucide-react';
 import { MANDATORY_FINANCIAL_DISCLAIMER } from '../data/servicesData';
 
@@ -46,23 +43,7 @@ export const ContactPage: React.FC = () => {
     showToast('Enquiry received! Our team will connect with you shortly.');
   };
 
-  const handleWhatsAppSend = () => {
-    if (!name.trim() || !phone.trim()) {
-      validate();
-      return;
-    }
-    const cleanPhone = phone.replace(/\D/g, '');
-    const encodedText = encodeURIComponent(
-      `*New Service Enquiry - Omkaar Associates*\n` +
-      `*Name:* ${name}\n` +
-      `*Mobile:* ${cleanPhone}\n` +
-      `*Service Required:* ${service}\n` +
-      `*City / Location:* ${city || 'Not specified'}\n` +
-      `*Message:* ${message || 'I would like to enquire regarding this service.'}`
-    );
-    window.open(`https://wa.me/919820000000?text=${encodedText}`, '_blank');
-    showToast('Redirecting to WhatsApp chat...');
-  };
+
 
   return (
     <div className="pt-16 min-h-screen bg-[#FAF9F6]">
@@ -104,62 +85,38 @@ export const ContactPage: React.FC = () => {
 
               <div className="space-y-4 text-sm">
                 
-                <div className="flex items-start gap-3.5 p-3 rounded-xl bg-[#FAF9F6] border border-slate-200">
-                  <div className="p-2 rounded-lg bg-[#7A1F2B] text-white shrink-0 mt-0.5">
-                    <Phone className="w-4 h-4 text-[#D4A017]" />
+                <div className="flex items-start gap-3.5 p-4 rounded-xl bg-[#FAF9F6] border border-[#D4A017]/30">
+                  <div className="p-2.5 rounded-lg bg-[#7A1F2B] text-white shrink-0 mt-0.5">
+                    <Mail className="w-5 h-5 text-[#D4A017]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-[#7A1F2B] uppercase">Telephone / Helpline</div>
-                    <div className="font-bold text-slate-900 mt-0.5">+91 98200 00000</div>
-                    <div className="text-xs text-slate-500">+91 22 2800 0000</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3.5 p-3 rounded-xl bg-[#F0F7F2] border border-[#176B3A]/30">
-                  <div className="p-2 rounded-lg bg-[#176B3A] text-white shrink-0 mt-0.5">
-                    <MessageCircle className="w-4 h-4 text-[#D4A017]" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-[#176B3A] uppercase">WhatsApp Assistance</div>
-                    <div className="font-bold text-slate-900 mt-0.5">+91 98200 00000</div>
-                    <div className="text-xs text-[#176B3A]">Quick replies during office hours</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3.5 p-3 rounded-xl bg-[#FAF9F6] border border-slate-200">
-                  <div className="p-2 rounded-lg bg-[#7A1F2B] text-white shrink-0 mt-0.5">
-                    <Mail className="w-4 h-4 text-[#D4A017]" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-[#7A1F2B] uppercase">Email Enquiries</div>
-                    <a href="mailto:omkaarassociates9@gmail.com" className="font-bold text-slate-900 mt-0.5 block hover:text-[#7A1F2B] transition-colors">
+                    <div className="text-xs font-bold text-[#7A1F2B] uppercase tracking-wider">Official Email Helpdesk</div>
+                    <a href="mailto:omkaarassociates9@gmail.com" className="font-bold text-slate-900 text-sm mt-0.5 block hover:text-[#7A1F2B] transition-colors underline underline-offset-4 decoration-[#D4A017]/40">
                       omkaarassociates9@gmail.com
                     </a>
-                    <div className="text-xs text-slate-500">Official Communication Desk</div>
+                    <div className="text-xs text-slate-500 mt-1">Direct communication for enquiries, document reviews & updates</div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3.5 p-3 rounded-xl bg-[#FAF9F6] border border-slate-200">
-                  <div className="p-2 rounded-lg bg-[#7A1F2B] text-white shrink-0 mt-0.5">
-                    <MapPin className="w-4 h-4 text-[#D4A017]" />
+                <div className="flex items-start gap-3.5 p-4 rounded-xl bg-[#F0F7F2] border border-[#176B3A]/30">
+                  <div className="p-2.5 rounded-lg bg-[#176B3A] text-white shrink-0 mt-0.5">
+                    <Building2 className="w-5 h-5 text-[#D4A017]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-[#7A1F2B] uppercase">Office Location</div>
-                    <div className="font-bold text-slate-900 mt-0.5">Omkaar Associates Consultation Centre</div>
-                    <div className="text-xs text-slate-600 mt-0.5">
-                      Main Commercial Complex, Central Avenue, India
-                    </div>
+                    <div className="text-xs font-bold text-[#176B3A] uppercase tracking-wider">Online Consultation</div>
+                    <div className="font-bold text-slate-900 text-sm mt-0.5">Procedural Service Support Across India</div>
+                    <div className="text-xs text-slate-600 mt-1">Online file verification, slot scheduling & application tracking</div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3.5 p-3 rounded-xl bg-[#FAF9F6] border border-slate-200">
-                  <div className="p-2 rounded-lg bg-[#7A1F2B] text-white shrink-0 mt-0.5">
-                    <Clock className="w-4 h-4 text-[#D4A017]" />
+                <div className="flex items-start gap-3.5 p-4 rounded-xl bg-[#FAF9F6] border border-slate-200">
+                  <div className="p-2.5 rounded-lg bg-[#7A1F2B] text-white shrink-0 mt-0.5">
+                    <Clock className="w-5 h-5 text-[#D4A017]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-[#7A1F2B] uppercase">Working Hours</div>
-                    <div className="font-bold text-slate-900 mt-0.5">Monday to Saturday: 10:00 AM – 7:00 PM</div>
-                    <div className="text-xs text-slate-500">Sunday: Closed</div>
+                    <div className="text-xs font-bold text-[#7A1F2B] uppercase tracking-wider">Consultation Hours</div>
+                    <div className="font-bold text-slate-900 text-sm mt-0.5">Monday to Saturday: 10:00 AM – 7:00 PM</div>
+                    <div className="text-xs text-slate-500 mt-1">Sunday: Closed • Enquiries submitted outside hours reviewed next business day</div>
                   </div>
                 </div>
 
@@ -206,13 +163,13 @@ export const ContactPage: React.FC = () => {
                   </div>
 
                   <div className="pt-4 flex flex-col sm:flex-row justify-center gap-3">
-                    <button
-                      onClick={handleWhatsAppSend}
-                      className="px-5 py-3 bg-[#176B3A] hover:bg-[#0F4726] text-white rounded-lg text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2"
+                    <a
+                      href="mailto:omkaarassociates9@gmail.com"
+                      className="px-5 py-3 bg-[#7A1F2B] hover:bg-[#5A141E] text-white rounded-lg text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2"
                     >
-                      <MessageSquare className="w-4 h-4" />
-                      <span>Chat on WhatsApp Now</span>
-                    </button>
+                      <Mail className="w-4 h-4 text-[#D4A017]" />
+                      <span>Send Direct Email</span>
+                    </a>
                     <button
                       onClick={() => {
                         setIsSubmitted(false);
@@ -259,7 +216,7 @@ export const ContactPage: React.FC = () => {
                           type="tel"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          placeholder="98200 12345"
+                          placeholder="e.g. 9876543210"
                           className={`w-full pl-11 pr-3 py-2.5 text-sm rounded-lg border ${
                             errors.phone ? 'border-[#F28C28] bg-[#FFF5EC]' : 'border-slate-300'
                           } focus:outline-none focus:ring-2 focus:ring-[#7A1F2B] focus:border-transparent`}
@@ -330,20 +287,19 @@ export const ContactPage: React.FC = () => {
                   <div className="pt-3 flex flex-col sm:flex-row gap-3">
                     <button
                       type="submit"
-                      className="flex-1 py-3.5 px-5 bg-[#F28C28] hover:bg-[#D97718] text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-lg shadow-sm transition-colors flex items-center justify-center gap-2"
+                      className="flex-1 py-3.5 px-5 bg-[#F28C28] hover:bg-[#D97718] text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-lg shadow-sm transition-colors flex items-center justify-center gap-2 cursor-pointer"
                     >
                       <Send className="w-4 h-4" />
-                      <span>Submit Enquiry</span>
+                      <span>Submit Service Enquiry</span>
                     </button>
 
-                    <button
-                      type="button"
-                      onClick={handleWhatsAppSend}
-                      className="py-3 px-5 bg-[#F0F7F2] border border-[#176B3A] text-[#176B3A] hover:bg-[#E0EFE6] font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-2"
+                    <a
+                      href="mailto:omkaarassociates9@gmail.com"
+                      className="py-3.5 px-5 bg-[#FAF9F6] hover:bg-[#FDF2F4] border border-[#7A1F2B]/30 text-[#7A1F2B] font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-2"
                     >
-                      <MessageSquare className="w-4 h-4 text-[#176B3A]" />
-                      <span>Send via WhatsApp</span>
-                    </button>
+                      <Mail className="w-4 h-4 text-[#7A1F2B]" />
+                      <span>Or Email Us Directly</span>
+                    </a>
                   </div>
 
                   {/* Form Disclaimer */}

@@ -7,7 +7,7 @@ import {
   MANDATORY_FINANCIAL_DISCLAIMER,
   MANDATORY_RTO_DISCLAIMER
 } from '../data/servicesData';
-import { Phone, MessageCircle, Mail, MapPin, Shield } from 'lucide-react';
+import { Mail, Shield } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const { navigate, openEnquiryModal } = useApp();
@@ -35,22 +35,10 @@ export const Footer: React.FC = () => {
             
             <div className="pt-2 space-y-2 text-xs">
               <div className="flex items-center gap-2.5 text-white/90">
-                <Phone className="w-4 h-4 text-[#D4A017] shrink-0" />
-                <span>Helpline: +91 98200 00000 / +91 22 2800 0000</span>
-              </div>
-              <div className="flex items-center gap-2.5 text-white/90">
-                <MessageCircle className="w-4 h-4 text-[#D4A017] shrink-0" />
-                <span>WhatsApp: +91 98200 00000 (Mon–Sat, 10 AM – 7 PM)</span>
-              </div>
-              <div className="flex items-center gap-2.5 text-white/90">
                 <Mail className="w-4 h-4 text-[#D4A017] shrink-0" />
-                <a href="mailto:omkaarassociates9@gmail.com" className="hover:text-[#D4A017] transition-colors">
+                <a href="mailto:omkaarassociates9@gmail.com" className="hover:text-[#D4A017] transition-colors underline underline-offset-4 decoration-[#D4A017]/40">
                   Email: omkaarassociates9@gmail.com
                 </a>
-              </div>
-              <div className="flex items-start gap-2.5 text-white/90">
-                <MapPin className="w-4 h-4 text-[#D4A017] shrink-0 mt-0.5" />
-                <span>Branch Consultation Centre, Main Commercial Complex, India</span>
               </div>
             </div>
           </div>

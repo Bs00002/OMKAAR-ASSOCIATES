@@ -6,7 +6,7 @@ import {
   ChevronDown, 
   Menu, 
   X, 
-  MessageCircle, 
+  Mail, 
   ArrowRight,
   ShieldCheck,
   Building2,
@@ -166,13 +166,11 @@ export const Header: React.FC = () => {
             {/* ZONE 3: 1-2 PRIMARY ACTIONS */}
             <div className="hidden lg:flex items-center space-x-3 shrink-0">
               <a
-                href="https://wa.me/919820000000?text=Hello%20Omkaar%20Associates,%20I%20would%20like%20assistance%20with%20your%20services."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold uppercase tracking-wider rounded-lg border border-[#176B3A]/30 text-[#176B3A] bg-[#F0F7F2] hover:bg-[#176B3A] hover:text-white transition-all whitespace-nowrap shadow-2xs"
+                href="mailto:omkaarassociates9@gmail.com"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold uppercase tracking-wider rounded-lg border border-[#7A1F2B]/30 text-[#7A1F2B] bg-white/80 hover:bg-[#7A1F2B] hover:text-white transition-all whitespace-nowrap shadow-2xs"
               >
-                <MessageCircle className="w-3.5 h-3.5 shrink-0 text-[#176B3A] group-hover:text-white" />
-                <span>WhatsApp</span>
+                <Mail className="w-3.5 h-3.5 shrink-0" />
+                <span>Email Us</span>
               </a>
 
               <button
@@ -530,13 +528,11 @@ export const Header: React.FC = () => {
             {/* Mobile Drawer Bottom CTAs */}
             <div className="pt-4 border-t border-[#D4A017]/25 space-y-2">
               <a
-                href="https://wa.me/919820000000?text=Hello%20Omkaar%20Associates,%20I%20need%20service%20guidance."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-2.5 px-4 bg-[#176B3A] text-white rounded-lg font-semibold text-sm flex items-center justify-center gap-2"
+                href="mailto:omkaarassociates9@gmail.com"
+                className="w-full py-2.5 px-4 bg-[#7A1F2B] text-white rounded-lg font-semibold text-sm flex items-center justify-center gap-2"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>Chat on WhatsApp</span>
+                <Mail className="w-4 h-4 text-[#D4A017]" />
+                <span>Email Us</span>
               </a>
               <button
                 onClick={() => {
